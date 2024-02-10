@@ -103,6 +103,7 @@ const ButtonContainer = styled.div`
   }
 `;
 const Profile = () => {
+  axios.defaults.withCredentials = true;
   const { currentUser } = useSelector((state) => state.user);
   // console.log(currentUser);
   const [user, setUser] = useState();
