@@ -132,6 +132,7 @@ justify-content space-between;
 align-items: center;`;
 
 const Podcast = () => {
+  axios.defaults.withCredentials = true;
   const { id } = useParams();
   const dispatch = useDispatch();
   const { currentUser } = useSelector((state) => state.user);
