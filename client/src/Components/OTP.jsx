@@ -85,6 +85,7 @@ const Resend = styled.div`
   cursor: pointer;
 `;
 const OTP = ({ email, name, otpVerified, setOtpVerified, reason }) => {
+  axios.defaults.withCredentials = true;
   const dispatch = useDispatch();
   const theme = useTheme();
   const [otpSent, setOtpsent] = useState(false);
