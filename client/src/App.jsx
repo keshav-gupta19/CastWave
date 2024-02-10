@@ -37,7 +37,7 @@ import ThemeComponent from "./Components/ThemeComponent";
 import { closeSignin } from "./redux/setSignInSlice.jsx";
 import Podcast from "./Pages/Podcast.jsx";
 import Sidebar from "../src/Components/Sidebar.jsx";
-
+import axios from "axios";
 const Frame = styled.div`
   display: flex;
   flex-direction: column;
@@ -60,6 +60,7 @@ function App() {
   const { openplayer, type, episode, podid, currenttime, index } = useSelector(
     (state) => state.audioplayer
   );
+  axios.defaults.withCredentials = true;
   const { opensi } = useSelector((state) => state.signin);
   const [SignUpOpen, setSignUpOpen] = useState(false);
   const [SignInOpen, setSignInOpen] = useState(false);
