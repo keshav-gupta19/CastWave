@@ -286,7 +286,7 @@ const Upload = ({ setUploadOpen }) => {
     try {
       setLoading(true);
       const res = await axios.post(
-        "http://localhost:3000/api/podcast/",
+        "https://cast-wave-api.vercel.app/api/podcast/",
         podcast,
         {
           headers: { Authorization: `Bearer ${token}` },
