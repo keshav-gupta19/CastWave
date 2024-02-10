@@ -99,6 +99,7 @@ const SearchedCards = styled.div`
   }
 `;
 const Search = () => {
+  axios.defaults.withCredentials = true;
   const [searched, setSearched] = useState("");
   const [searchedPodcasts, setSearchedPodcasts] = useState([]);
   const [Loading, setLoading] = useState(false);
