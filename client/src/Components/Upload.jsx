@@ -171,6 +171,7 @@ const Uploading = styled.div`
 `;
 
 const Upload = ({ setUploadOpen }) => {
+  axios.defaults.withCredentials = true;
   const dispatch = useDispatch();
   const [podcast, setPodcast] = useState({
     name: "",
