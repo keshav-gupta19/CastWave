@@ -59,6 +59,7 @@ const Description = styled.div`
   color: ${({ theme }) => theme.text_secondary};
 `;
 const Episodecard = ({ episode, podid, user, type, index }) => {
+  axios.defaults.withCredentials = true;
   const dispatch = useDispatch();
   const addViewToPodcast = async () => {
     try {
