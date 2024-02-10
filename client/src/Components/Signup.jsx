@@ -139,6 +139,7 @@ const Error = styled.div`
       `}
 `;
 const Signup = ({ setSignUpOpen, setSignInOpen }) => {
+  axios.defaults.withCredentials = true;
   const [name, setName] = useState("");
   const [disabled, setDisabled] = useState(true);
   const [email, setEmail] = useState("");
