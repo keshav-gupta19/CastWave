@@ -146,6 +146,7 @@ const Favorite = styled(IconButton)`
   box-shadow: 0 0 16px 6px #222423 !important;
 `;
 const PodcastCard = ({ podcast, user }) => {
+  axios.defaults.withCredentials = true;
   const Navigate = useNavigate();
   const token = localStorage.getItem("castwavetoken");
   const [favorite, setFavorite] = useState(false);
