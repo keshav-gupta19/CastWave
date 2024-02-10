@@ -54,6 +54,7 @@ const DisplayNo = styled.div`
 `;
 
 const DisplayPodcasts = () => {
+  axios.defaults.withCredentials = true;
   const { type } = useParams();
   const [podcasts, setPodcasts] = useState([]);
   const [string, setString] = useState("");
