@@ -109,7 +109,7 @@ const Search = () => {
       setLoading(true);
       setSearchedPodcasts([]);
       const res = await axios.get(
-        `http://localhost:3000/api/podcast/search?q=${e.target.value}`
+        `https://cast-wave-api.vercel.app/api/podcast/search?q=${e.target.value}`
       );
       // console.log(res.data);
       setLoading(false);
