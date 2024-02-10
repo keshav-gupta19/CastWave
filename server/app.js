@@ -30,8 +30,9 @@ app.use((err, req, res, next) => {
 app.use(express.json({ limit: "50mb" }));
 
 const corsConfig = {
+  origin: ["https://cast-wave-keshav.vercel.app/"],
+  methods: ["POST", "GET", "PUT"],
   credentials: true,
-  origin: true,
 };
 app.use(cors(corsConfig));
 
