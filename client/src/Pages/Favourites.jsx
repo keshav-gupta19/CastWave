@@ -51,6 +51,7 @@ const Display = styled.div`
 `;
 const Img = styled.img``;
 const Favourites = () => {
+  axios.defaults.withCredentials = true;
   const [user, setUser] = useState();
   const [Loading, setLoading] = useState(false);
   const token = localStorage.getItem("castwavetoken");
