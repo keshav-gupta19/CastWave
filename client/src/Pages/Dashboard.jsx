@@ -62,6 +62,7 @@ const Loader = styled.div`
   width: 100%;
 `;
 const Dashboard = () => {
+  axios.defaults.withCredentials = true;
   const [mostPopular, setMostPopular] = useState([]);
   const [user, setUser] = useState("");
   const [comedy, setComedy] = useState([]);
